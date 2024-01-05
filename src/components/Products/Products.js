@@ -1,13 +1,11 @@
 'use client'
-import React, {useEffect, useContext} from "react";
-import SiteContext, {Context} from '../../Context/SiteContext'
-import "../Products/Products.css";
-import { MdFavoriteBorder } from 'react-icons/md';
-import axios from "axios";
+import React, { useContext, useEffect } from 'react';
+import axios from 'axios';
+import SiteContext from '../../context/SiteContext'; 
 
 const Products = () => {
 
-  const {products,setProducts,addBasket, setAddBasket} = useContext(Context)
+  const {products,setProducts,addBasket, setAddBasket} = useContext(SiteContext)
 
   useEffect(() => {
     axios.get('https://fakestoreapi.com/products')
