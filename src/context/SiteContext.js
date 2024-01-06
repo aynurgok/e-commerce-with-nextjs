@@ -1,9 +1,10 @@
 'use client'
-import { createContext , useState}from "react";
+import { createContext, useState}from "react";
 
 export const Context = createContext()
 
 const Provider = ({children}) => {
+  
   const [addBasket, setAddBasket] = useState([]);
   const [products, setProducts] = useState([]);
 
@@ -13,10 +14,11 @@ const Provider = ({children}) => {
     products,
     setProducts
   }
-    return(
-        <Context.Provider value={data}>
-            {children}
-        </Context.Provider>
-    );
+  return(
+    <Context.Provider value= {data}>
+      {children}
+    </Context.Provider>
+  );
 }
 export default Provider
+
