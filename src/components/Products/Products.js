@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from 'react';
 import axios from 'axios';
 import {Context} from '../../context/SiteContext'; 
 import {MdFavoriteBorder} from 'react-icons/md'
+import "../Products/Products.css";
 const Products = () => {
 
   const {products,setProducts,addBasket, setAddBasket} = useContext(Context)
