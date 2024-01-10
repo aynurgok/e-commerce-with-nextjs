@@ -1,11 +1,8 @@
 'use client'
 import { Inter } from 'next/font/google'
-import Header from '@/components/Header/Headercomponents'
-import Navigation from '@/components/Navigation/Navigationcomponents'
-import Products from '@/components/Products/Productscomponents'
-import SideBar from '@/components/SideBar/SideBarcomponents'
-import './globals.css'
+import Main from '@/components/maincomponents'
 import SiteProvider from '../context/SiteContext'
+import './globals.css'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -22,18 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>{children}
       <SiteProvider>
-        <Header />
-        <Navigation />
-        <div className='container-fluid mt-5'>
-          <div className='flex '>
-            <div className='lg:w-2/12 md:w-2/12 sm:w-2/12 p-3 border text-dark hidden md:block'>
-              <SideBar/>
-            </div>
-            <div className='lg:w-10/12 md:w-10/12 sm:w-10/12 md:pl-4'>
-              <Products />
-            </div>
-          </div>
-       </div>
+        <Main />
        </SiteProvider>
       </body>
     </html>

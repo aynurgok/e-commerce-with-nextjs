@@ -18,10 +18,11 @@ const Products = () => {
     })
   }, [])
 
-  const handleAddToBasket = (product) => {
-    setAddBasket([...addBasket, product]);
+  const handleAddToBasket = (product, index) => {
+    setAddBasket([...addBasket, { ...product, index }]);
   };
-
+  
+   
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
       {products.map((product, index) => (
@@ -43,6 +44,7 @@ const Products = () => {
             </div>
             <MdFavoriteBorder className='favori-btn' />
           </div>
+          
         </div>
       ))}
     </div>
