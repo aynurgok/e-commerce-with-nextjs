@@ -11,7 +11,7 @@ const Basket = () => {
     <div>
       <button onClick={handleOpenBasket}></button>
       <ul>
-        {addBasket.map((product,i) => {
+        {addBasket.map((product) => {
           <li key={index}>
             {product.title}
           </li>

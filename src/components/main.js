@@ -11,7 +11,7 @@ const Main = () => {
         <Header />
         <Navigation />
         <div className='container-fluid mt-5'>
-          <div className='flex  '>
+          <div className='flex '>
             <div className='lg:w-2/12 md:w-2/12 sm:w-2/12 p-3 border text-dark hidden md:block'>
               <SideBar/>
             </div>
